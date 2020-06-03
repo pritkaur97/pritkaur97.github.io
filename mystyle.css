@@ -1,7 +1,41 @@
-body {
-backgraound-color: lightblue;
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap');
+body{
+   font-family: 'Dosis', sans-serif; 
+  
 }
-h1 {
-color: blue;
-text-align: center;
+.Background{
+    margin-left: 100px ;
+    margin-right: 100px;
+    
+}
+.Personal_Info {
+    color: black;
+    text-align:center;
+}
+.Summary{
+    
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+.Work_Experience{
+    
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.Education{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.Project{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.Awards{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.Interests{
+    padding-left: 20px;
+    padding-right: 20px;
 }
