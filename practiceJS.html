@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="practiceJS.css">
+
+<script>
+  
+function show(evt,name){
+  var i, tabcontent , tablinks;
+  tabcontent=document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+   
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(name).style.display = "block";
+  evt.currentTarget.className += " active";
+  }
+
+</script>
+</head>
+<body>
+  <div class="personal_info" >
+    <h1 style="padding-left: 30px; font-size: 40px; padding-top: 30px;">Pritpal Kaur</h1>
+  </div>
+
+  <div class="tab">
+    
+    <button class="tablinks" onclick="show(event,'contact')">Contact</button>
+    <button class="tablinks" onclick="show(event,'Projects')">Projects</button>
+    <button class="tablinks" onclick="show(event, 'Resume')">Resume</button>
+    <button class="tablinks" onclick="show(event, 'about')">About Me</button>
+  </div>
+  <div id= "about" class="tabcontent">
+    <h3 style="color: green;">Summary of Skills</h3>
+    <p id="about"><b>Operating Systems </b> Windows 7, Windows 8, Windows 10, Linux, UNIX<br>
+      <b>Applications</b>   Eclipse, NetBeans, IntelliJ, Visual Studio Code, MS Office, Sublime Text <br>
+      <b>Programming </b> Java, JavaScript, SQL, C#, C <br>
+      <b>Platforms </b> Selenium, Test Cafe, Cypress, Spring Boot <br>
+      <b>Methodologies</b>  Agile and Scrum, Waterfall <br>
+      <b>Project Management</b> Databases, MySQL, PostgreSQL <br>
+      <b>Languages </b>  English Spoken and Written, Punjabi Spoken and Written, Hindi Spoken and Written
+      <h3 style="color: green;">Awards</h3> 
+      <b>Received Gold Medal</b> in Academics during the year 2015 in Bachelor’s Degree.<br>
+      <b>Event Head </b>of workshop ‘QUADCOPTERS’ during Technical Fest TECHLONE”15 held at G.N.E Ludhiana, India. 
+      
+      <h3 style="color: green;">Interests</h3>
+      <ul><li>Free hand Sketching, watching TV shows.</li>
+     <li> cooking, decorating interior.</li></ul> </p>
+  </div>
+
+  <div id="Resume" class="tabcontent">
+    <h3 style="color: green;">Work Experience</h3>
+    <p id= "resume">
+      <b>Frontier Softech (July 2016- Nov 2017) </b><br>
+      <ul><li>Worked as a Quality Assurance Analyst, wrote regression tests in Test Cafe using JavaScript. </li>
+      <li>Built Automation framework for smoke tests using BDD framework cucumber with Java. </li>
+      <li>Tested API’s using postman and wrote test cases for manual testing.</li> 
+      <li>Worked in a complete agile environment to deliver products to client. </li></ul>
+      <b>Ansh InfoTech (Jan 2016-June 2016) </b><br>
+      <ul><li>Worked as an intern, developed a weather application in Android which fetch data from Weather forecast system.</li>
+     <li> Did Cross platform testing and e2e testing for this application.</li>
+     <li>Used android studio to design and run the application.</li></ul>
+     
+     <h3 style="color: green;"><b>Education</b></h3>
+     <ul><li><b>Masters of Engineering- Software Engineering   (Jan 2018 - April2020) </b><br></li>
+       Concordia University, Montreal, QC
+      <ul><li> Relevant Courses: Advance Programming Practices, Software Project Management, Software Design Methodologies. </li></ul>
+      <li><b>Bachelor of Engineering- Computer Science (2012-2016) </b><br></li>
+     G.N.E, Ludhiana India
+     <ul><li> Relevant Courses: Introduction to C programming, Data Structures and Algorithms, Relational Data Base Management System and Operating Systems. </li></ul> </p>
+  </div>
+<div id="Projects" class="tabcontent">
+  <h3 style="color: green;">Projects</h3>
+  <p id="projects" > <b>Risk Game (Winter2019)</b>
+    <ul><li>Implemented a strategy-based board game ‘Risk’ using Java, MVC architecture and agile development methodology.</li>
+    <li>Added functionalities to edit or create a map to play the game, includes three phases- reinforcement phase, attack and fortification phase.</li>
+    <li>Used ‘observer design pattern’ to update graphical interface about the changes to the state of the game.</li>
+    <li>Performed web application automation testing using Selenium. </li></ul>
+    <b>E-Commerce System under Microservice Architecture (Fall2019)</b><br>
+    <ul><li>Developed an E-Commerce web application using JAVA under micro-service Architecture. Includes three modules of function, including User module, Inventory module, and Sales module.</li>
+    <li>Used Spring Boot (Netflix-Eureka)Service registry for service registration and service discovery. Spring Cloud Zuul is used as gateway of the micro-servicesystem.</li>
+    <li>Used MySQL relational database for storing data.
+    <li>Used Postman to perform endpoint testing and Cypress to perform automation testing.</li></ul>
+    <b> TweetMiner (Summer2018)</b><br>
+    <ul><li>Developed a web application that can analyze the live feed of the Twitter API using Play Framework and Java.</li>
+    <li>Tweet data is processed using Java. Each match includes the name of the tweet’s author and the geo location. User profile has tags which are also displayed along with the tweets. </li>
+    <li>Uses dependency injection to mock the original functionality which facilitates writing of JUnit testcases. </li></ul></p>
+</div>
+<div id="contact" class="tabcontent">
+  <h3 style="color: green;"> Contact</h3>
+  
+
+  <p id="contact">   <a href="http://linkedin.com/in/pritpal-kaur-138b861a1";> <img src="linkedin.png" height="50" width="50"></a> 
+    <a href="https://github.com/pritkaur97;">  <img src="github.jpg"  height="50" width="50"></a>
+    <a href="mailto: 94pritpalkaur@gmail.com";> <img src="gmail.jpg" height="50" width="55"></a></p>
+</div>
+</body>
+</html> 
