@@ -5,10 +5,18 @@ body {
   background-position: cover;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: scroll;
+  overflow-x: hidden;
 }
-.parent {
-  position: relative;
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
+}
+
 .personal_info {
   text-align: left;
   color: honeydew;
@@ -27,6 +35,10 @@ body {
   width: 200px;
   top: 50px;
   margin-left: 30px;
+}
+.contact {
+  height: 100%;
+  width: 100%;
 }
 .tab {
   overflow: hidden;
@@ -50,13 +62,13 @@ body {
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  border-top: 2px solid rgb(231, 90, 8);
+  border-top: 4px solid rgb(231, 90, 8);
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
   background-color: rgb(231, 90, 8);
-  border-top: 3px solid rgb(231, 90, 8);
+  border-top: 2px solid rgb(231, 90, 8);
 }
 
 /* Style the tab content */
