@@ -10,13 +10,21 @@ body{
 .personal_info{
     text-align:left;
     color: rgb(166, 167, 166);
-    position: relative;
-    
     height: 150px;
+    
     background-color: rgb(59, 59, 59);
     border-bottom: 1mm solid green;
 }
-
+.profile_pic{
+  border-radius: 200px;
+  border-color: khaki;
+  position: absolute;
+  overflow: hidden;
+  height: 200px;
+  width: 200px;
+  top: 50px;
+  margin-left: 30px;
+}
 .tab {
     overflow: hidden;
     position: absolute;
