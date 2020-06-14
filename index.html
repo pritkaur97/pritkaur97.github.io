@@ -14,9 +14,9 @@ function show(evt,name){
   }
 
   // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
+  tablinks = document.querySelectorAll(".active");
   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
+    tablinks[i].className = "tablinks";
   }
 
   // Show the current tab, and add an "active" class to the button that opened the tab
@@ -27,8 +27,9 @@ function show(evt,name){
 </script>
 </head>
 <body>
+  <div class="parent" >
   <div class="personal_info" >
-    <h1 style="padding-left: 250px; font-size: 50px; padding-top: 50px;">Pritpal Kaur</h1>
+    <h1 style="padding-left: 250px; font-size: 40px; padding-top: 50px;">Pritpal Kaur</h1>
     
   </div>
 <div class="profile_pic">
@@ -39,10 +40,10 @@ function show(evt,name){
     <button class="tablinks" onclick="show(event,'contact')">Contact</button>
     <button class="tablinks" onclick="show(event,'Projects')">Projects</button>
     <button class="tablinks" onclick="show(event, 'Resume')">Resume</button>
-    <button class="tablinks" onclick="show(event, 'about')">About Me</button>
+    <button class="active" onclick="show(event, 'about')">About Me</button>
   </div>
-  <div id= "about" class="tabcontent">
-    <h3 style="color: green; margin-top: 60px;">Summary of Skills</h3>
+  <div id= "about" style ="display: block;"class="tabcontent">
+    <h3 style="color: green; margin-top: 100px;">Summary of Skills</h3>
     <p id="about"><b>Operating Systems </b> Windows 7, Windows 8, Windows 10, Linux, UNIX<br>
       <b>Applications</b>   Eclipse, NetBeans, IntelliJ, Visual Studio Code, MS Office, Sublime Text <br>
       <b>Programming </b> Java, JavaScript, SQL, C#, C <br>
@@ -60,7 +61,7 @@ function show(evt,name){
   </div>
 
   <div id="Resume" class="tabcontent">
-    <h3 style="color: green; margin-top: 60px;">Work Experience</h3>
+    <h3 style="color: green; margin-top: 100px;">Work Experience</h3>
     <p id= "resume">
       <b>Frontier Softech (July 2016- Nov 2017) </b><br>
       <ul><li>Worked as a Quality Assurance Analyst, wrote regression tests in Test Cafe using JavaScript. </li>
@@ -81,7 +82,7 @@ function show(evt,name){
      <ul><li> Relevant Courses: Introduction to C programming, Data Structures and Algorithms, Relational Data Base Management System and Operating Systems. </li></ul> </p>
   </div>
 <div id="Projects" class="tabcontent">
-  <h3 style="color: green; margin-top: 60px;">Projects</h3>
+  <h3 style="color: green; margin-top: 100px;"><b>Projects</b></h3>
   <p id="projects" > <b>Risk Game (Winter2019)</b>
     <ul><li>Implemented a strategy-based board game ‘Risk’ using Java, MVC architecture and agile development methodology.</li>
     <li>Added functionalities to edit or create a map to play the game, includes three phases- reinforcement phase, attack and fortification phase.</li>
@@ -98,12 +99,13 @@ function show(evt,name){
     <li>Uses dependency injection to mock the original functionality which facilitates writing of JUnit testcases. </li></ul></p>
 </div>
 <div id="contact" class="tabcontent">
-  <h3 style="color: green; margin-top: 60px;"> Contact</h3>
+  <h3 style="color: green; margin-top: 100px;"><b> Contact</b></h3>
   <h5>94pritpalkaur@gmail.com</h5>
 
   <p id="contact">   <a href="http://linkedin.com/in/pritpal-kaur-138b861a1";> <img src="linkedin.png" height="50" width="50"></a> 
     <a href="https://github.com/pritkaur97;">  <img src="github.jpg"  height="50" width="50"></a>
     <a href="mailto: 94pritpalkaur@gmail.com";> <img src="gmail.jpg" height="50" width="55"></a></p>
+</div>
 </div>
 </body>
 </html> 
